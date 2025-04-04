@@ -1,0 +1,5 @@
+.container { max-width: 800px; margin: 20px auto; font-family: Arial, sans-serif; }
+.hand { margin: 20px 0; }
+.card { display: inline-block; padding: 10px; margin: 5px; border: 1px solid #000; }
+.hidden { background: #666; color: #666; }
+.button { padding: 10px 20px; margin: 5px; cursor: pointer; }
