@@ -7,9 +7,9 @@ import '../css/reset.css'
 import { Blackjack } from '../js/blackjack/'
 
 // PAGES
-import { BlackjackView } from '../views/blackjack'
+import { blackjackView } from '../views/blackjack'
 
-document.querySelector('#app').innerHTML = BlackjackView
+document.querySelector('#app').innerHTML = blackjackView
 
 // Game initialization
 /** @type {Blackjack} */
