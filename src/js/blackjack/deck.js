@@ -1,4 +1,4 @@
-import { Card } from './card.js';
+import { Card } from './card.js'
 
 /**
  * Represents a standard 52-card deck
@@ -9,13 +9,13 @@ export class Deck {
      * Creates a new deck with 52 cards
      */
     constructor() {
-        this.cards = [];
-        const suits = ['spades', 'hearts', 'diamonds', 'clubs'];
-        const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'k', 'a'];
+        this.cards = []
+        const suits = ['spades', 'hearts', 'diamonds', 'clubs']
+        const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'j', 'q', 'k', 'a']
         
         for (let suit of suits) {
             for (let rank of ranks) {
-                this.cards.push(new Card(suit, rank));
+                this.cards.push(new Card(suit, rank))
             }
         }
     }
@@ -35,6 +35,6 @@ export class Deck {
      * @returns {Card} The drawn card
      */
     draw() {
-        return this.cards.pop();
+        return this.cards.pop()
     }
 }
