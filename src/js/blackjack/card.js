@@ -5,12 +5,13 @@
 export class Card {
     /**
      * Creates a new Card instance
-     * @param {string} suit - The suit of the card (SPADES, HEART, DIAMOND, CLUBS)
-     * @param {string} rank - The rank of the card (2-10, J, Q, K, A)
+     * @param {string} suit - The suit of the card (e.g., 'spades', 'hearts', 'diamonds', 'clubs')
+     * @param {string} rank - The rank of the card (e.g., '2'-'10', 'j', 'q', 'k', 'a')
      */
     constructor(suit, rank) {
-        this.suit = suit;
-        this.rank = rank;
+        if (!suit || !rank) throw new Error('Suit and rank are required')
+        this.suit = suit.toLowerCase()
+        this.rank = rank.toLowerCase()
     }
 
     /**
@@ -18,9 +19,11 @@ export class Card {
      * @returns {number} The point value (2-10 for numbers, 10 for face cards, 11 for Ace)
      */
     getValue() {
-        if (['j', 'q', 'k'].includes(this.rank)) return 10;
-        if (this.rank === 'a') return 11;
-        return parseInt(this.rank);
+        const faceCards = ['j', 'q', 'k']
+        if (faceCards.includes(this.rank)) return 10
+        if (this.rank === 'a') return 11
+        const value = parseInt(this.rank)
+        return isNaN(value) ? 0 : value // Default to 0 for invalid ranks
     }
 
     /**
@@ -28,6 +31,6 @@ export class Card {
      * @returns {string} The card as rank+suit (e.g., "A♠")
      */
     toString() {
-        return `${this.rank}${this.suit}`;
+        return `${this.rank}${this.suit}`
     }
 }

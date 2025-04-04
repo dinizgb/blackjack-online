@@ -7,7 +7,7 @@ export class Hand {
      * Creates an empty hand
      */
     constructor() {
-        this.cards = [];
+        this.cards = []
     }
 
     /**
@@ -15,7 +15,7 @@ export class Hand {
      * @param {Card} card - The card to add
      */
     addCard(card) {
-        this.cards.push(card);
+        this.cards.push(card)
     }
 
     /**
@@ -23,20 +23,20 @@ export class Hand {
      * @returns {number} The total score
      */
     getScore() {
-        let score = 0;
-        let aces = 0;
+        let score = 0
+        let aces = 0
 
         for (let card of this.cards) {
-            let value = card.getValue();
-            if (value === 11) aces++;
-            score += value;
+            let value = card.getValue()
+            if (value === 11) aces++
+            score += value
         }
 
         while (score > 21 && aces > 0) {
-            score -= 10;
-            aces--;
+            score -= 10
+            aces--
         }
 
-        return score;
+        return score
     }
 }
