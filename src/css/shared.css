@@ -8,7 +8,8 @@
     --base-font: "Poppins", sans-serif;
     --desk-background-gradient: radial-gradient(circle, rgba(81,156,66,1) 0%, rgba(11,55,2,1) 100%);
     --desk-background: #519c42;
-    --disabled-button-border-color: #444;
+    --disabled-button-border-color: #bbb;
+    --disabled-button-color: #999;
     --disabled-button: #ddd;
     --hit-button: #ffba00;
     --logo-color: #bcff00;
