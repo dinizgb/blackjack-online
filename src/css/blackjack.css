@@ -1,5 +1,183 @@
-.container { max-width: 800px; margin: 20px auto; font-family: Arial, sans-serif; }
-.hand { margin: 20px 0; }
-.card { display: inline-block; padding: 10px; margin: 5px; border: 1px solid #000; }
-.hidden { background: #666; color: #666; }
-.button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+.main-content {
+    gap: 2vh;
+}
+
+.card {
+    background: var(--app-white);
+    border: 1px solid var(--app-black);
+    display: inline-block;
+    height: 175px;
+    width: 125px;
+    margin: 0.313rem;
+    padding: 0.625rem;
+}
+
+.dealer-hand, .player-hand {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+dialog {
+    background: none;
+    border: none;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+    background-color: var(--app-modal-backdrop);
+}
+
+.score-tooltip {
+    background-color: var(--score-tooltip-background);
+    border-radius: 6px;
+    color: var(--app-white);
+    line-height: 2rem;
+    margin: 1vh auto;
+    padding: 0 1.25rem;
+    width: fit-content;
+}
+
+/*** GAME ACTIONS ***/
+
+.game-actions {
+    padding: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.game-actions-button {
+    border-radius: 0.4rem;
+    border: 3px solid var(--app-black);
+    box-shadow: 0.1rem 0.1rem;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 900;
+    padding: 0.6rem 1.3rem;
+    min-width: 120px;
+    min-height: 44px;
+}
+
+.game-actions-button:hover, .game-actions-button:focus {
+    box-shadow: 0.15rem 0.15rem;
+    outline: none;
+    transform: translate(-0.09rem, -0.09rem);
+}
+
+.game-actions-button:focus {
+    border-color: var(--app-black);
+    outline: none;
+}
+
+.game-actions-button:disabled {
+    background: var(--disabled-button);
+    border: 3px solid var(--disabled-button-border-color);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.new-game-button {
+    background: var(--new-game-button);
+}
+
+.hit-button {
+    background: var(--hit-button);
+}
+
+.stand-button {
+    background: var(--stand-button);
+}
+
+.new-game-dialog-button {
+    background: var(--new-game-dialog-button);
+    margin-top: 1rem;
+}
+
+/*** MEDIA QUERIES ***/
+
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5rem;
+    }
+
+    .heading-2 {
+        font-size: 2rem;
+    }
+
+    .heading-3 {
+        font-size: 1rem;
+    }
+
+    .card {
+        height: 140px;
+        width: 100px;
+        padding: 0.5rem;
+        margin: 0.188rem;
+    }
+
+    .game-actions-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        min-width: 100px;
+    }
+
+    .welcome-message {
+        margin-top: 5vh;
+    }
+}
+
+/* Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .card {
+        height: 100px;
+        width: 70px;
+        padding: 0.313rem;
+        margin: 0.125rem;
+    }
+
+    .dealer-hand, .player-hand {
+        gap: 0.3rem;
+    }
+
+    .score-tooltip {
+        padding: 0 0.938rem;
+        line-height: 1.5rem;
+    }
+
+    .game-actions {
+        gap: 0.5rem;
+    }
+
+    .game-actions-button {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+        min-width: 90px;
+        min-height: 44px;
+    }
+
+    .welcome-message {
+        margin-top: 3vh;
+    }
+
+    dialog {
+        max-width: 90%;
+    }
+}
+
+/* Very small screens (up to 320px) */
+@media (max-width: 320px) {
+    .card {
+        height: 80px;
+        width: 55px;
+        padding: 0.25rem;
+        margin: 0.063rem;
+    }
+
+    .game-actions-button {
+        font-size: 1rem;
+        min-width: 80px;
+    }
+}
