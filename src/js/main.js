@@ -13,12 +13,12 @@ document.querySelector('#app').innerHTML = BlackjackView
 
 // Game initialization
 /** @type {Blackjack} */
-const game = new Blackjack();
+const game = new Blackjack()
 
 /**
  * Event listeners for game controls
  */
-document.getElementById('newGame').addEventListener('click', () => game.startNewGame());
-document.getElementById('hit').addEventListener('click', () => game.hit());
-document.getElementById('stand').addEventListener('click', () => game.stand());
-document.getElementById('closeDialog').addEventListener('click', () => game.closeStatusDialog());
+document.getElementById('newGame').addEventListener('click', () => game.startNewGame())
+document.getElementById('hit').addEventListener('click', () => game.hit())
+document.getElementById('stand').addEventListener('click', () => game.stand())
+document.getElementById('closeDialog').addEventListener('click', () => game.closeStatusDialog())
