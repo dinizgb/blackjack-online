@@ -1,20 +1,20 @@
-export const BlackjackView = `
+export const blackjackView = `
   <header class="container ta-center">
       <h1 class="logo">Blackjack Online</h1>
     </header>
     <main class="container d-flex fd-column jc-center">
       <div class="main-content ai-center d-flex fd-column">
-        <section class="app-white ta-center" id="welcomeMessage" role="alert">
+        <section class="app-white ta-center" id="welcomeMessage" aria-live="polite">
           <h2 class="heading-2">Welcome!</h2>
           <h3 class="heading-3">Welcome! Press "new game" to start playing.</h3>
         </section>
-        <section aria-live="assertive">
+        <section aria-live="polite">
           <div class="dealer-hand d-flex jc-center" id="dealerHand"></div>
-          <p aria-live="assertive" class="score-tooltip" id="dealerScore"></p>
+          <p aria-live="polite" class="score-tooltip" id="dealerScore"></p>
         </section>
-        <section aria-live="assertive">
+        <section aria-live="polite">
           <div class="player-hand d-flex jc-center" id="playerHand"></div>
-          <p aria-live="assertive" class="score-tooltip" id="playerScore"></p>
+          <p aria-live="polite" class="score-tooltip" id="playerScore"></p>
         </section>
       </div>
     </main>
@@ -35,8 +35,8 @@ export const BlackjackView = `
       </section>
     </footer>
     <dialog id="statusDialog">
-      <h2 class="app-white heading-2" id="gameStatus"></h2>
-      <h3 class="app-white heading-3">Dealer: <span id="dialogStatusDealerScore"></span> / You: <span id="dialogStatusPlayerScore"></span></h3>
+      <h2 class="app-white heading-2" id="gameStatus" aria-live="polite"></h2>
+      <h3 class="app-white heading-3" aria-live="polite">Dealer: <span id="dialogStatusDealerScore"></span> / You: <span id="dialogStatusPlayerScore"></span></h3>
       <button
         class="game-actions-button new-game-dialog-button"
         id="closeDialog"
