@@ -17,16 +17,17 @@
     gap: 0.5rem;
 }
 
-dialog {
-    background: none;
+.status-dialog {
+    background: var(--app-modal-backdrop);
     border: none;
+    box-shadow: 6px 7px 100vw 110vh var(--app-modal-backdrop);
     text-align: center;
     width: 90%;
     max-width: 400px;
 }
 
-dialog:-internal-dialog-in-top-layer::backdrop {
-    background-color: var(--app-modal-backdrop);
+.status-dialog:-internal-dialog-in-top-layer::backdrop {
+    display: none;
 }
 
 .score-tooltip {
@@ -52,6 +53,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
     border-radius: 6px;
     border: 3px solid var(--app-black);
     box-shadow: 0.1rem 0.1rem;
+    color: var(--app-black);
     cursor: pointer;
     font-size: 1.25rem;
     font-weight: 900;
@@ -74,6 +76,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .game-actions-button:disabled {
     background: var(--disabled-button);
     border: 3px solid var(--disabled-button-border-color);
+    color: var(--disabled-button-color);
     cursor: not-allowed;
     pointer-events: none;
 }

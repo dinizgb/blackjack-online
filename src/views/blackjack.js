@@ -34,7 +34,7 @@ export const blackjackView = `
         </button>
       </section>
     </footer>
-    <dialog id="statusDialog">
+    <dialog class="status-dialog" id="statusDialog">
       <h2 class="app-white heading-2" id="gameStatus" aria-live="polite"></h2>
       <h3 class="app-white heading-3" aria-live="polite">Dealer: <span id="dialogStatusDealerScore"></span> / You: <span id="dialogStatusPlayerScore"></span></h3>
       <button
