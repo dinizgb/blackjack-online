@@ -25,10 +25,6 @@ footer, hgroup, menu {
   display: block;
 }
 
-html {
-  min-height: 100vh;
-}
-
 body {
   line-height: 1;
 }

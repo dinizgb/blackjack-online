@@ -33,7 +33,7 @@
     font-family: var(--logo-font);
     font-size: 3.5rem;
     letter-spacing: 0.25rem;
-    padding: 2.5rem 0 0 0;
+    padding: 1vh 0 0 0;
 }
 
 .heading-2 {
@@ -56,11 +56,10 @@ html {
     background: var(--desk-background);
     background: var(--desk-background-gradient);
     font-family: var(--base-font);
-    min-height: 100vh;
 }
 
 body, .app {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -68,12 +67,11 @@ body, .app {
 
 main {
     flex: 1;
-    padding-bottom: 20vh;
 }
 
 footer {
     width: 100%;
-    padding: 6vh 0;
+    padding: 3vh 0;
 }
 
 /*** SHARED STYLES ***/
@@ -108,4 +106,32 @@ footer {
 
 .ta-center {
     text-align: center;
+}
+
+/*** MEDIA QUERIES ***/
+
+/* Tablets (up to 768px) */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .heading-2 {
+        font-size: 2rem;
+    }
+
+    .heading-3 {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile phones (up to 480px) */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .heading-2 {
+        font-size: 1.25rem;
+    }
 }
