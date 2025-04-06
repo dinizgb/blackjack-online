@@ -99,15 +99,15 @@ export class Blackjack {
     updateUI() {
         document.getElementById("welcomeMessage")?.remove()
         document.getElementById('playerHand').innerHTML = this.playerHand.cards
-            .map(card => `<figure class="card"><img src="/images/cards/${card.suit}-${card.rank}.png" alt="${card.rank} ${card.suit}" /></figure>`).join('')
+            .map(card => `<figure class="card"><img src="/images/cards/${card.suit}-${card.rank}.webp" alt="${card.rank} ${card.suit}" /></figure>`).join('')
         document.getElementById('playerScore').textContent = `Your Hand: ${this.playerHand.getScore()}`
         document.getElementById('dialogStatusPlayerScore').textContent = `${this.playerHand.getScore()}`
 
         let dealerCards = this.dealerHand.cards.map((card, index) => {
             if (index === 0 && !this.gameOver) {
-                return '<figure class="card hidden"><img src="/images/cards/card-back.png" alt="Hidden card" /></figure>'
+                return '<figure class="card hidden"><img src="/images/cards/card-back.webp" alt="Hidden card" /></figure>'
             }
-            return `<figure class="card"><img src="/images/cards/${card.suit}-${card.rank}.png" alt="${card.rank} ${card.suit}" /></figure>`
+            return `<figure class="card"><img src="/images/cards/${card.suit}-${card.rank}.webp" alt="${card.rank} ${card.suit}" /></figure>`
         })
         document.getElementById('dealerHand').innerHTML = dealerCards.join('')
         document.getElementById('dealerScore').textContent = this.gameOver ? `Dealer's Hand: ${this.dealerHand.getScore()}` : `Dealer's Hand: ?`
