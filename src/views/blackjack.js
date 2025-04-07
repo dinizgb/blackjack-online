@@ -6,7 +6,7 @@ export const blackjackView = `
       <div class="main-content ai-center d-flex fd-column">
         <section class="app-white ta-center" id="welcomeMessage" aria-live="polite">
           <h2 class="heading-2">Welcome!</h2>
-          <h3 class="heading-3">Welcome! Press "new game" to start playing.</h3>
+          <h3 class="heading-3">Press "new game" to start playing.</h3>
         </section>
         <section aria-live="polite">
           <div class="dealer-hand d-flex jc-center" id="dealerHand"></div>
